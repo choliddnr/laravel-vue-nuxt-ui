@@ -13,3 +13,11 @@ Route::middleware('guest')->group(function () {
     Route::get('/auth/google/redirect', [AuthController::class, 'googleRedirect'])->name('auth.google.redirect');
     Route::get('/auth/google/callback', [AuthController::class, 'googleCallback'])->name('auth.google.callback');
 });
+
+Route::middleware('auth')->group(function () {
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    // Route::get('/dashboard/articles', [DashboardController::class, 'articles'])->name('dashboard.articles');
+    // Route::get('/dashboard/articles/{article:slug}', [DashboardController::class, 'article'])->name('dashboard.article');
+    // Route::get('/dashboard/categories', [DashboardController::class, 'categories'])->name('dashboard.categories');
+    // Route::get('/dashboard/categories/{category:slug}', [DashboardController::class, 'category'])->name('dashboard.category');
+});
