@@ -52,6 +52,11 @@ class Article extends Model
             $query->where('title', 'like', '%' . $search . '%');
             // ->orWhere('content', 'like', '%' . $search . '%');
         });
+        $query->when($filter['status'] ?? false, function (Builder $query, string $status) {
+
+            $query->where('status', '=', $status);
+            // ->orWhere('content', 'like', '%' . $search . '%');
+        });
         $query->when($filter['category'] ?? false, function (Builder $query, string $category) {
             $query->whereHas('category', function (Builder $query) use ($category) {
                 $query->where('slug', $category);
@@ -62,6 +67,12 @@ class Article extends Model
                 $query->where('username', $author);
             });
         });
+        if (auth()->user() && request()->routeIs('dashboard.*')) {
+            $query->where('author_id', auth()->user()->id);
+        }
+        if (request()->routeIs('blog')) {
+            $query->where('status', 'published');
+        }
         // $query->where('title', 'like', '%' . request('search') . '%');
         // dump($query->get());
     }

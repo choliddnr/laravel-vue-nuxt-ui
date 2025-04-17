@@ -1,15 +1,20 @@
 <script setup lang="ts">
-import { useTemplateRef, h, ref, watch, resolveComponent, computed } from "vue";
+import { useTemplateRef, h, ref, resolveComponent, computed } from "vue";
 import { upperFirst } from "scule";
 import type { TableColumn } from "@nuxt/ui";
-import { rand, refDebounced, useDebounce, useFetch } from "@vueuse/core";
-import { getPaginationRowModel, type Row } from "@tanstack/table-core";
+import { rand, refDebounced, useFetch } from "@vueuse/core";
+import { type Row } from "@tanstack/table-core";
 import { ApiPagination, type Article, type User } from "@/types";
-import CustomersAddModal from "@/components/customers/CustomersAddModal.vue";
 import CustomersDeleteModal from "@/components/customers/CustomersDeleteModal.vue";
-import type { Pagination } from "@/types";
-
 import Dashboard from "@/layouts/Dashboard.vue";
+import LazyForm from "@/components/article/Form.vue";
+
+function getCsrfToken() {
+    const value = document.cookie.match(/XSRF-TOKEN=([^;]+)/);
+    return value ? decodeURIComponent(value[1]) : undefined;
+}
+
+const article_id = ref<number | null>(null);
 
 defineOptions({ layout: Dashboard });
 const { categories } = defineProps<{
@@ -23,6 +28,15 @@ const UDropdownMenu = resolveComponent("UDropdownMenu");
 const toast = useToast();
 const search = ref<string>("");
 const debouncedSearch = refDebounced(search, 1000);
+
+const statusFilter = ref("");
+const categoryFilter = ref("");
+
+const overlay = useOverlay();
+
+const columnVisibility = ref();
+
+const table = useTemplateRef("table");
 
 const items = [
     [
@@ -39,7 +53,6 @@ const items = [
     ],
 ];
 
-const table = useTemplateRef("table");
 const columnFilters = ref([
     {
         id: "title",
@@ -47,10 +60,9 @@ const columnFilters = ref([
     },
 ]);
 
-const columnVisibility = ref();
 const rowSelection = ref({ 1: false });
 
-function getRowItems(row: Row<Article>) {
+const getRowItems = (row: Row<Article>) => {
     return [
         {
             type: "label",
@@ -59,12 +71,24 @@ function getRowItems(row: Row<Article>) {
         {
             label: "Copy customer ID",
             icon: "i-lucide-copy",
-            onSelect() {
-                navigator.clipboard.writeText(row.original.id!.toString());
-                toast.add({
-                    title: "Copied to clipboard",
-                    description: "Customer ID copied to clipboard",
-                });
+            onSelect: () => {
+                // navigator.clipboard.writeText("row.original.id!.toString()");
+                console.log(navigator);
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(row.original.id!.toString());
+                    toast.add({
+                        title:
+                            "Copied to clipboard" + row.original.id!.toString(),
+                        description: "Customer ID copied to clipboard",
+                    });
+                } else {
+                    console.log("Clipboard API not supported");
+                    toast.add({
+                        title: "Failed" + row.original.id!.toString(),
+                        description: "Copy id is not supported",
+                        color: "error",
+                    });
+                }
             },
         },
         {
@@ -73,14 +97,28 @@ function getRowItems(row: Row<Article>) {
         {
             label: "Show",
             icon: "i-lucide-eye",
+            to: route("post", row.original.slug),
+            target: "_blank",
+            disabled: row.original.status !== "published",
         },
         {
             label: "Edit",
             icon: "i-lucide-pencil",
+            onSelect() {
+                article_id.value = row.original.id || null;
+                open();
+            },
         },
         {
-            label: "Change Status",
+            label: row.original.status !== "published" ? "Publish" : "Archive",
             icon: "i-lucide-refresh-cw",
+            onSelect: async () => {
+                const status =
+                    row.original.status !== "published"
+                        ? "published"
+                        : "archived";
+                await updateStatus(row.original.id!, status);
+            },
         },
         {
             type: "separator",
@@ -89,40 +127,14 @@ function getRowItems(row: Row<Article>) {
             label: "Delete article",
             icon: "i-lucide-trash",
             color: "error",
-            onSelect() {
-                toast.add({
-                    title: "Article deleted",
-                    description: "The article has been deleted.",
-                });
+            onSelect: async () => {
+                destroy(row.original.id!);
             },
         },
     ];
-}
+};
 
 const columns: TableColumn<Article>[] = [
-    // {
-    //     id: "select",
-    //     header: ({ table }) =>
-    //         h(UCheckbox, {
-    //             modelValue: table.getIsSomePageRowsSelected()
-    //                 ? "indeterminate"
-    //                 : table.getIsAllPageRowsSelected(),
-    //             "onUpdate:modelValue": (value: boolean | "indeterminate") =>
-    //                 table.toggleAllPageRowsSelected(!!value),
-    //             ariaLabel: "Select all",
-    //         }),
-    //     cell: ({ row }) =>
-    //         h(UCheckbox, {
-    //             modelValue: row.getIsSelected(),
-    //             "onUpdate:modelValue": (value: boolean | "indeterminate") =>
-    //                 row.toggleSelected(!!value),
-    //             ariaLabel: "Select row",
-    //         }),
-    // },
-    // {
-    //     accessorKey: "id",
-    //     header: "ID",
-    // },
     {
         accessorKey: "title",
         header: "TItle",
@@ -183,23 +195,27 @@ const columns: TableColumn<Article>[] = [
     },
 ];
 
-const statusFilter = ref("all");
-
-watch(
-    () => statusFilter.value,
-    (newVal) => {
-        if (!table?.value?.tableApi) return;
-
-        const statusColumn = table.value.tableApi.getColumn("status");
-        if (!statusColumn) return;
-
-        if (newVal === "all") {
-            statusColumn.setFilterValue(undefined);
-        } else {
-            statusColumn.setFilterValue(newVal);
-        }
-    }
-);
+const statuses = [
+    {
+        title: "All",
+    },
+    {
+        id: "published",
+        title: "Published",
+    },
+    {
+        id: "published",
+        title: "Published",
+    },
+    {
+        id: "draft",
+        title: "Draft",
+    },
+    {
+        id: "archived",
+        title: "Archived",
+    },
+];
 
 const pagination = ref({
     pageIndex: 0,
@@ -211,28 +227,136 @@ const page_url = computed<string>(
         "http://laravel-clean.test/dashboard/blog?page=" +
         (pagination.value.pageIndex + 1) +
         "&search=" +
-        debouncedSearch.value
+        debouncedSearch.value +
+        "&category=" +
+        (categoryFilter.value || "") +
+        "&status=" +
+        (statusFilter.value || "")
+);
+const articles = ref<Article[]>([]);
+const { isFetching, execute } = await useFetch<ApiPagination<Article>>(
+    page_url,
+    {
+        refetch: true,
+        afterFetch({ data, response, context, execute }) {
+            console.log("ctx", JSON.parse(data));
+            const res_data = JSON.parse(data);
+            pagination.value.total = res_data.meta.total;
+            pagination.value.pageSize = res_data.meta.per_page;
+            articles.value = res_data.data;
+            return data;
+        },
+    }
 );
 
-const articles = ref<Article[]>([]);
-const {
-    isFetching,
-    error,
-    data: articlesData,
-} = await useFetch<ApiPagination<Article>>(page_url, {
-    refetch: true,
-    afterFetch({ data, response, context, execute }) {
-        console.log("ctx", JSON.parse(data));
-        const res_data = JSON.parse(data);
-        pagination.value.total = res_data.meta.total;
-        pagination.value.pageSize = res_data.meta.per_page;
-        articles.value = res_data.data;
-        return data;
+const modal = overlay.create(LazyForm, {
+    props: {
+        categories: categories,
+        article_id: article_id,
     },
 });
-watch(search, () => {
-    console.log("page_url", debouncedSearch.value);
-});
+
+const open = async () => {
+    const isSuccess = await modal.open();
+
+    if (isSuccess) {
+        execute();
+
+        toast.add({
+            title: `New article created`,
+            description: "The article has been created.",
+            color: "success",
+            id: "modal-success",
+        });
+
+        return;
+    }
+
+    toast.add({
+        title: `No article created`,
+        description: "The article has not been created. Something went wrong.",
+        color: "error",
+        id: "modal-dismiss",
+    });
+};
+const destroy = async (id: number) => {
+    // const data = await useFetch(route("articles.destroy", id)).delete();
+    await useFetch(
+        route("articles.destroy", id),
+        {
+            method: "DELETE",
+            headers: {
+                Accept: " application/json, text/plain, */*",
+                "X-XSRF-TOKEN": getCsrfToken() || "",
+                "Content-Type": "application/json",
+            },
+        },
+
+        {
+            afterFetch({ data, response }) {
+                console.log("ctx", response, JSON.parse(data));
+                if (response.status === 200) {
+                    toast.add({
+                        title: `Article deleted`,
+                        description: "The article has been deleted.",
+                        color: "success",
+                        id: "modal-success",
+                    });
+                    execute();
+                } else {
+                    toast.add({
+                        title: `Failed`,
+                        description: "The article has not been deleted.",
+                        color: "error",
+                        id: "modal-dismiss",
+                    });
+                }
+
+                return data;
+            },
+        }
+    ).delete(id);
+};
+const updateStatus = async (id: number, status: string) => {
+    await useFetch(
+        route("articles.updateStatus", id),
+        {
+            method: "PATCH",
+            headers: {
+                Accept: " application/json, text/plain, */*",
+                "X-XSRF-TOKEN": getCsrfToken() || "",
+                "Content-Type": "application/json",
+            },
+        },
+        {
+            afterFetch({ data, response }) {
+                console.log(
+                    "change status response",
+                    response,
+                    JSON.parse(data)
+                );
+                if (response.status === 200) {
+                    toast.add({
+                        title: `Article archived`,
+                        description: "The article has been archived.",
+                        color: "success",
+                        id: "modal-success",
+                    });
+                    execute();
+                } else {
+                    toast.add({
+                        title: `Failed`,
+                        description: "The article has not been archived.",
+                        color: "error",
+                        id: "modal-dismiss",
+                    });
+                }
+                return data;
+            },
+        }
+    ).patch({ status: status });
+};
+console.log("categories", categories);
 </script>
 <template>
     <UDashboardPanel id="articles">
@@ -267,17 +391,6 @@ watch(search, () => {
 
         <template #body>
             <div class="flex flex-wrap items-center justify-between gap-1.5">
-                <!-- <UInput
-                    :model-value="(table?.tableApi?.getColumn('title')?.getFilterValue() as string)"
-                    class="max-w-sm"
-                    icon="i-lucide-search"
-                    placeholder="Filter titles..."
-                    @update:model-value="
-                        table?.tableApi
-                            ?.getColumn('title')
-                            ?.setFilterValue($event)
-                    "
-                /> -->
                 <UInput
                     v-model="search"
                     class="max-w-sm"
@@ -313,13 +426,29 @@ watch(search, () => {
                     </CustomersDeleteModal>
 
                     <USelect
-                        v-model="statusFilter"
-                        :items="categories"
+                        v-model="categoryFilter"
+                        :items="[{ id: 'all', title: 'All' }, ...categories]"
+                        default-value=""
+                        value-key="slug"
+                        label-key="title"
                         :ui="{
                             trailingIcon:
                                 'group-data-[state=open]:rotate-180 transition-transform duration-200',
                         }"
-                        placeholder="Filter status"
+                        placeholder="Filter Category"
+                        class="min-w-28"
+                    />
+                    <USelect
+                        v-model="statusFilter"
+                        :items="statuses"
+                        default-value=""
+                        value-key="id"
+                        label-key="title"
+                        :ui="{
+                            trailingIcon:
+                                'group-data-[state=open]:rotate-180 transition-transform duration-200',
+                        }"
+                        placeholder="Filter Status"
                         class="min-w-28"
                     />
                     <UDropdownMenu
@@ -348,6 +477,16 @@ watch(search, () => {
                             trailing-icon="i-lucide-settings-2"
                         />
                     </UDropdownMenu>
+                    <UButton
+                        label="New Articlce"
+                        color="primary"
+                        @click="
+                            () => {
+                                article_id = null;
+                                open();
+                            }
+                        "
+                    />
                 </div>
             </div>
 

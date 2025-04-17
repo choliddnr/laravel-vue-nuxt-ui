@@ -44,7 +44,7 @@ class AuthController extends Controller
                 'name' => $googleuser->getName(),
                 'email' => $googleuser->getEmail(),
                 'remember_token' => $googleuser->token,
-                'job' => rand(1, 3) == 1 ? 'web developer' : (rand(1, 3) == 2 ? 'web designer' : 'tech lead'),
+                'job' => rand(1, 3) == 1 ? 'web developer' : (rand(1, 3) == 2 ? 'web designer' : 'tukang gigi'),
             ]);
         }
 

@@ -14,7 +14,7 @@ Route::get('/', function () {
 
 
 Route::get('/blog', function () {
-    return view('blog', ['articles' => Article::with('author', 'category')->filter(request()->all())->latest()->paginate(10)->withQueryString()]);
+    return view('blog', ['articles' => Article::with('author', 'category')->filter(request()->all())->latest()->paginate(10)->withQueryString(), 'user' => auth()->user()]);
 })->name('blog');
 
 
@@ -36,6 +36,9 @@ Route::get('/category/{category:slug}', function (Category $category) {
 })->name('category');
 
 Route::get('/blog/{article:slug}', function (Article $article) {
+    if ($article->status !== 'published') {
+        abort(404);
+    }
     return view('article', ['article' => $article]);
 })->name('post');
 

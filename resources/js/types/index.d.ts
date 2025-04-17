@@ -115,7 +115,7 @@ export type Article = {
     content: string;
     created_at: Date | string;
     id?: number;
-    image: string;
+    image?: string;
     slug: string;
     title: string;
     status: "published" | "draft" | "archived";

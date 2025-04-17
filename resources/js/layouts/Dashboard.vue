@@ -11,7 +11,7 @@ import { router } from "@inertiajs/vue3";
 
 const toast = useToast();
 // const route = useRoute();
-console.log("route;", route().current());
+// console.log("route;", route().current());
 const open = ref(false);
 
 const links = [
