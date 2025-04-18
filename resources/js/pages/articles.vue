@@ -224,7 +224,8 @@ const pagination = ref({
 });
 const page_url = computed<string>(
     () =>
-        "http://laravel-clean.test/dashboard/blog?page=" +
+        route("dashboard.blog") +
+        "?page=" +
         (pagination.value.pageIndex + 1) +
         "&search=" +
         debouncedSearch.value +
