@@ -53,6 +53,8 @@ class AuthController extends Controller
         return redirect()->route('dashboard');
     }
 
+
+
     public function logout(Request $request): RedirectResponse
     {
         Auth::guard('web')->logout();

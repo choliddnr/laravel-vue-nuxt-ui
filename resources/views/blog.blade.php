@@ -47,8 +47,23 @@
         {{ $articles->links() }}
 
     </div>
+
+
     @forelse($articles as $article)
-        <div class="bg-white my-2 sm:my-5">
+        <div class="card card-border bg-base-300 w-full my-5 rounded-none
+                            ">
+            <div class="card-body">
+                <h2 class="card-title">{{$article->title}}</h2>
+                <p>{{ Str::limit($article->content, 200)}}...</p>
+                <div class="card-actions justify-end">
+                    {{-- <button class="btn btn-primary">Buy Now</button> --}}
+                    <a href="/blog/{{$article->slug}}" class="btn">
+                        <span class="absolute inset-0"></span>Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{-- <div class="bg-white my-2 sm:my-5">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
                 <div class="mx-auto mt-1 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 py-5 sm:mt-2 sm:py-7 ">
@@ -89,7 +104,7 @@
                     <!-- More posts... -->
                 </div>
             </div>
-        </div>
+        </div> --}}
     @empty
         <p class="text-2xl content-center font-semibold">Article not found</p>
     @endforelse
