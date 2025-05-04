@@ -78,3 +78,18 @@
     --depth: 1;
     --noise: 0;
 }
+
+/* Tailwind-compatible custom selector using :has() */
+.popover-wrapper:has([popover]:open) .arrow-down {
+    display: inline;
+}
+.popover-wrapper:has([popover]:open) .arrow-up {
+    display: none;
+}
+
+.popover-wrapper:not(:has([popover]:open)) .arrow-down {
+    display: none;
+}
+.popover-wrapper:not(:has([popover]:open)) .arrow-up {
+    display: inline;
+}

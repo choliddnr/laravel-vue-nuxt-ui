@@ -1,0 +1,289 @@
+<div class="navbar bg-base-100 shadow-sm px-10 py-5 sticky top-0 z-50">
+    <div class="navbar-start mx-auto">
+
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 30" class="h-svgo-icon h-svgo-icon--logo"
+                style="fill:var(--neutral--1000);color:var(--neutral--1000);height:30;width:192;" data-v-8bf4be8b=""
+                data-v-03dae1ca="">
+                <clipPath id="i370534843__a">
+                    <path d="M0 0h191.25v30H0z"></path>
+                </clipPath>
+                <g clip-path="url(#i370534843__a)">
+                    <path fill="#007dff"
+                        d="M18.39 7.147a9.43 9.43 0 0 0-7.665.2 9.464 9.464 0 0 0-2.606 1.855L1.675 15.68a5.26 5.26 0 0 0-1.53 3.71c0 2.878 2.356 5.245 5.22 5.245h.001c.063 0 .126 0 .19-.003a3.949 3.949 0 0 1-1.354-6.548l5.39-5.413.571-.578.194-.194.219-.221c.135-.133.273-.26.417-.382a12.177 12.177 0 0 1 8.043-3.025c.481 0 .963.028 1.441.084a9.347 9.347 0 0 0-2.088-1.207zm21.84 2.558c-1.078-2.666-4.147-3.97-6.802-2.889l-.066.028A5.208 5.208 0 0 0 31.7 7.968l-3.943 3.963-.57.57-.052.05a1.74 1.74 0 0 1-2.407-.05l-3.026-3.04a11.359 11.359 0 0 0-6.804.467 5.893 5.893 0 0 1 4.086 1.748l5.23 5.256a2.472 2.472 0 0 0 3.487 0l6.457-6.489c.062-.063.13-.12.201-.174a3.908 3.908 0 0 1 2.549-.946 3.927 3.927 0 0 1 3.693 2.625 5.253 5.253 0 0 0-.372-2.243zm-3.32.493c-.176 0-.352.015-.526.046a1.753 1.753 0 0 1 .236 2.67l-6.417 6.45-.041.041c-.112.114-.23.222-.35.326a12.185 12.185 0 0 1-8.15 3.117c-.448 0-.897-.024-1.342-.073a9.424 9.424 0 0 0 9.66.972 9.35 9.35 0 0 0 2.64-1.868l6.262-6.29.198-.2c.07-.07.138-.142.204-.216a3.068 3.068 0 0 0 .67-1.913c0-1.678-1.375-3.06-3.045-3.06h-.001zM25.896 21.152a5.916 5.916 0 0 1-4.143-1.748l-5.205-5.231a2.498 2.498 0 0 0-1.763-.75 2.443 2.443 0 0 0-1.747.726l-1.535 1.545-.646.648-1.502 1.51-.622.626-1.03 1.036-.919.924-.184.186a1.736 1.736 0 0 1-2.681-.269c-.036.19-.055.384-.055.577 0 1.679 1.374 3.06 3.045 3.062.769 0 1.51-.293 2.071-.818l.04-.04.04-.038.052-.053 1.697-1.705 2.756-2.77a1.742 1.742 0 0 1 2.446.013l3.083 3.098a11.36 11.36 0 0 0 6.802-.529zm29.99-12.416v6.682l-6.86-6.738h-1.26v13.688h3.585v-6.7l6.839 6.72h1.243V8.736zM66.93 22.395V8.761h-3.437V11.8h.006v7.537h-.006v3.057h3.437zM77.111 8.57h-1.49l-6.106 13.301-.233.507h3.623l.794-1.714h5.35l.794 1.714h3.624l-.232-.507zm-2.286 9.114 1.531-3.583 1.569 3.583zm22.433-3.078h-6.413v3.018h2.884c-.62 1.305-1.512 1.676-2.907 1.676-2.054 0-3.372-1.48-3.372-3.74 0-2.084 1.182-3.796 3.372-3.796 1.376 0 2.267.467 2.829 1.635h3.411c-.66-3.388-3.508-4.81-6.24-4.83-3.45 0-6.937 2.338-6.96 6.995.02 4.654 3.508 6.971 6.96 6.971 2.5 0 5.077-1.09 6.047-3.934.464-1.326.464-2.632.389-3.995zm8.632-6.036h-1.491l-6.106 13.301-.231.507h3.622l.795-1.714h5.349l.795 1.714h3.624l-.234-.507zm-2.286 9.114 1.53-3.583 1.57 3.583zm17.973-8.922v4.946h-4.186V8.762h-3.548v13.633h3.548v-5.472h4.186v5.472h3.546V8.762zm6.138 6.822c0 9.445 13.914 9.445 13.914 0 0-9.426-13.914-9.426-13.914 0zm3.566 0c0-4.908 6.802-4.908 6.802 0a3.418 3.418 0 0 1-3.401 3.115 3.413 3.413 0 0 1-3.401-3.115zm17.695-1.315c-1.222-.136-2.229-.349-2.152-1.382.116-1.617 3.76-1.773 3.76.04h3.294c.077-5.883-10.464-5.883-10.348 0 .038 2.959 1.977 3.971 4.921 4.186 1.356.078 2.48.292 2.48 1.249 0 1.598-4.244 1.577-4.244-.156h-3.353c-.076 5.998 10.969 5.9 10.969.175.001-3.413-2.634-3.821-5.327-4.112zm6.536-5.507v3.116h3.331v10.517h3.429V11.878h3.314V8.762zm15.628 10.536v-2.395h4.611v-3.098h-4.611v-1.927h5.019V8.762h-8.469v13.633h8.643v-3.098zm17-1.733c3.43-2.337 2.461-8.783-2.869-8.803h-5.95v13.633h3.47v-4.013h1.803l2.326 4.013h4.185l-.31-.506zm-2.869-2.279h-2.48v-3.408c.814 0 1.666-.019 2.48 0 1.977.02 1.88 3.408 0 3.408z">
+                    </path>
+                </g>
+            </svg></a>
+        <div class="mx-5">
+
+            <button class="btn btn-ghost text-lg font-light" popovertarget="popover-1" style="anchor-name:--anchor-1">
+                Harga
+            </button>
+            <div class="max-w-4xl dropdown menu p-2 bg-amber-500 shadow-xl" popover id="popover-1"
+                style="position-anchor:--anchor-1">
+                <ul class="menu xl:menu-horizontal bg-base-200 rounded-box lg:min-w-max">
+                    <li>
+                        <a>Solutions</a>
+                        <ul>
+                            <li><a>Design</a></li>
+                            <li><a>Development</a></li>
+                            <li><a>Hosting</a></li>
+                            <li><a>Domain register</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Enterprise</a>
+                        <ul>
+                            <li><a>CRM software</a></li>
+                            <li><a>Marketing management</a></li>
+                            <li><a>Security</a></li>
+                            <li><a>Consulting</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Products</a>
+                        <ul>
+                            <li><a>UI Kit</a></li>
+                            <li><a>WordPress themes</a></li>
+                            <li><a>WordPress plugins</a></li>
+                            <li>
+                                <a>Open source</a>
+                                <ul>
+                                    <li><a>Auth management system</a></li>
+                                    <li><a>VScode theme</a></li>
+                                    <li><a>Color picker app</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Company</a>
+                        <ul>
+                            <li><a>About us</a></li>
+                            <li><a>Contact us</a></li>
+                            <li><a>Privacy policy</a></li>
+                            <li><a>Press kit</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-ghost  text-lg font-light" popovertarget="popover-2" style="anchor-name:--anchor-2">
+                Layanan
+            </button>
+            <div class="max-w-4xl dropdown menu p-2 bg-amber-500" popover id="popover-2"
+                style="position-anchor:--anchor-2">
+                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto veniam suscipit repudiandae.
+                    Error
+                    nisi atque quae dolores eaque mollitia odio quasi? Optio nobis sit doloribus deleniti eos
+                    accusantium. Saepe, voluptatum!</h1>
+            </div>
+            <button class="btn btn-ghost  text-lg font-light" popovertarget="popover-3" style="anchor-name:--anchor-3">
+                Jelajah
+            </button>
+            <div class="max-w-4xl dropdown menu p-2 bg-amber-500" popover id="popover-3"
+                style="position-anchor:--anchor-3">
+                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto veniam suscipit repudiandae.
+                    Error
+                    nisi atque quae dolores eaque mollitia odio quasi? Optio nobis sit doloribus deleniti eos
+                    accusantium. Saepe, voluptatum!</h1>
+            </div>
+            <button class="btn btn-ghost  text-lg font-light" popovertarget="popover-4" style="anchor-name:--anchor-4">
+                Bantuan
+            </button>
+            <div class="max-w-4xl dropdown menu p-2 bg-amber-500" popover id="popover-4"
+                style="position-anchor:--anchor-4">
+                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto veniam suscipit repudiandae.
+                    Error
+                    nisi atque quae dolores eaque mollitia odio quasi? Optio nobis sit doloribus deleniti eos
+                    accusantium. Saepe, voluptatum!</h1>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-end">
+        <a class="btn btn-outline btn-secondary hover:bg-base-200 hover:text-base-content">Login</a>
+    </div>
+</div>
+
+<div id="backdrop" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+
+{{-- 
+    <div class="navbar bg-base-100 shadow-md px-4">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl">MySite</a>
+        </div>
+        <div class="flex-none">
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label> --}}
+{{-- <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="#">Home</a></li>
+        <li>
+            <details>
+                <summary>Services</summary>
+                <div class="p-4 space-y-4 bg-base-200 rounded-box">
+                    <div class="card card-compact bg-base-100 shadow">
+                        <figure><img src="https://via.placeholder.com/150" alt="Web Dev" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Web Development</h2>
+                            <p>Modern, responsive websites.</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary btn-sm">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-compact bg-base-100 shadow">
+                        <figure><img src="https://via.placeholder.com/150" alt="Design" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">UI/UX Design</h2>
+                            <p>Beautiful and intuitive interfaces.</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary btn-sm">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul> --}}
+{{-- </div>
+        </div>
+    </div> --}}
+
+
+<div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow w-screen">
+                <li><a>Item 1</a></li>
+                <li>
+                    <a>Parent</a>
+                    <div class="menu w-screen h-lg xl:menu-horizontal bg-base-300">
+
+                    </div>
+                    {{-- <ul class="menu xl:menu-horizontal bg-base-200 rounded-box lg:min-w-max">
+                        <li>
+                            <a>Solutions</a>
+                            <ul>
+                                <li><a>Design</a></li>
+                                <li><a>Development</a></li>
+                                <li><a>Hosting</a></li>
+                                <li><a>Domain register</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Enterprise</a>
+                            <ul>
+                                <li><a>CRM software</a></li>
+                                <li><a>Marketing management</a></li>
+                                <li><a>Security</a></li>
+                                <li><a>Consulting</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Products</a>
+                            <ul>
+                                <li><a>UI Kit</a></li>
+                                <li><a>WordPress themes</a></li>
+                                <li><a>WordPress plugins</a></li>
+                                <li>
+                                    <a>Open source</a>
+                                    <ul>
+                                        <li><a>Auth management system</a></li>
+                                        <li><a>VScode theme</a></li>
+                                        <li><a>Color picker app</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Company</a>
+                            <ul>
+                                <li><a>About us</a></li>
+                                <li><a>Contact us</a></li>
+                                <li><a>Privacy policy</a></li>
+                                <li><a>Press kit</a></li>
+                            </ul>
+                        </li>
+                    </ul> --}}
+                </li>
+                <li><a>Item 3</a></li>
+            </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">daisyUI</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 w-screen">
+            <li><a>Item 1</a></li>
+            <li>
+                <details>
+                    <summary>Parent</summary>
+                    {{-- <ul class="menu xl:menu-horizontal bg-base-200 rounded-box lg:min-w-max">
+                        <li>
+                            <a>Solutions</a>
+                            <ul>
+                                <li><a>Design</a></li>
+                                <li><a>Development</a></li>
+                                <li><a>Hosting</a></li>
+                                <li><a>Domain register</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Enterprise</a>
+                            <ul>
+                                <li><a>CRM software</a></li>
+                                <li><a>Marketing management</a></li>
+                                <li><a>Security</a></li>
+                                <li><a>Consulting</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Products</a>
+                            <ul>
+                                <li><a>UI Kit</a></li>
+                                <li><a>WordPress themes</a></li>
+                                <li><a>WordPress plugins</a></li>
+                                <li>
+                                    <a>Open source</a>
+                                    <ul>
+                                        <li><a>Auth management system</a></li>
+                                        <li><a>VScode theme</a></li>
+                                        <li><a>Color picker app</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Company</a>
+                            <ul>
+                                <li><a>About us</a></li>
+                                <li><a>Contact us</a></li>
+                                <li><a>Privacy policy</a></li>
+                                <li><a>Press kit</a></li>
+                            </ul>
+                        </li>
+                    </ul> --}}
+                    <div class="menu w-screen h-lg bg-base-300">
+
+                    </div>
+                </details>
+            </li>
+            <li><a>Item 3</a></li>
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <a class="btn">Button</a>
+    </div>
+</div>

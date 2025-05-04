@@ -68,25 +68,35 @@
 
 
     <script>
-        const popover1 = document.getElementById('popover-1');
-        const popover2 = document.getElementById('popover-2');
-        const popover3 = document.getElementById('popover-3');
-        const popover4 = document.getElementById('popover-4');
+        const popoverlayanan = document.getElementById('popover-layanan');
+        const popoverjelajahi = document.getElementById('popover-jelajahi');
+        const popoverbantuan = document.getElementById('popover-bantuan');
         const backdrop = document.getElementById('backdrop');
 
 
 
-        function toggleBackdrop(show) {
-            if (show) {
+        function togglePopover(e) {
+            const id = e.target.getAttribute('id');
+            const selector = 'button[popovertarget=' + id + ']';
+            const btn = document.querySelector(selector);
+            console.log('e', btn);
+
+
+            if (e.newState === "open") {
                 backdrop.classList.remove('hidden');
+                btn.querySelector('.arrow-up').classList.remove('hidden')
+                btn.querySelector('.arrow-down').classList.add('hidden')
+                btn.classList.add('text-gray-500')
             } else {
                 backdrop.classList.add('hidden');
+                btn.querySelector('.arrow-up').classList.add('hidden')
+                btn.querySelector('.arrow-down').classList.remove('hidden')
+                btn.classList.remove('text-gray-500')
             }
         }
-        popover1.addEventListener("beforetoggle", (e) => toggleBackdrop(e.newState === "open"));
-        popover2.addEventListener("beforetoggle", (e) => toggleBackdrop(e.newState === "open"));
-        popover3.addEventListener("beforetoggle", (e) => toggleBackdrop(e.newState === "open"));
-        popover4.addEventListener("beforetoggle", (e) => toggleBackdrop(e.newState === "open"));
+        popoverlayanan.addEventListener("beforetoggle", (e) => togglePopover(e));
+        popoverjelajahi.addEventListener("beforetoggle", (e) => togglePopover(e));
+        popoverbantuan.addEventListener("beforetoggle", (e) => togglePopover(e));
 
 
         const tooltipcontents = document.getElementsByClassName('herosection');
