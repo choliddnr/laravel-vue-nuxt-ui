@@ -14,51 +14,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Niagahoster Clone</title>
     @vite('resources/css/app.css')
-    {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script> --}}
 
 </head>
 
 
 <body class="bg-base-100 text-gray-900" data-theme="light-custom">
-    <!-- Navbar -->
     <x-lp.navbar />
-
-    <!-- Hero Section -->
-    {{-- <x-lp.hero /> --}}
-
+    <x-lp.hero />
     <x-lp.pricing />
-
-
-    {{-- <x-lp.mulaibisnisonlineandadisini /> --}}
-
-    <!-- Features Section -->
-
-
-
-    {{-- <x-lp.migrasiwebsitepraktis /> --}}
-
-
-    <!-- Testimonials Section -->
-    {{-- <x-lp.testimonials /> --}}
-
-    {{-- <x-lp.dashboardmudahdigunakan /> --}}
-
-
-    {{-- <x-lp.cepatstabilefisien /> --}}
-
-
-    {{-- "https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/25e6e2a6-e1e6-424a-9b81-32c82da35e00/public --}}
-
-
-    {{-- <x-lp.dipercaya /> --}}
-
-    {{-- <x-lp.bantuanteknis /> --}}
-    {{-- <x-lp.hemat /> --}}
-
-
-
-    <!-- Footer -->
-    {{-- <x-lp.footer /> --}}
+    <x-lp.mulaibisnisonlineandadisini />
+    <x-lp.migrasiwebsitepraktis />
+    <x-lp.testimonials />
+    <x-lp.dashboardmudahdigunakan />
+    <x-lp.cepatstabilefisien />
+    <x-lp.dipercaya />
+    <x-lp.bantuanteknis />
+    <x-lp.hemat />
+    <x-lp.footer />
 
 
 
@@ -132,7 +104,7 @@
 
 
         const carousel = document.getElementById("crs");
-        const itemWidth = () => carousel.querySelector(".carousel-item").offsetWidth + 16; // 16px is space-x-4
+        const itemWidth = () => carousel.querySelector(".carousel-item").offsetWidth + 16;
 
         document.getElementById("nextButton").addEventListener("click", () => {
             carousel.scrollBy({
@@ -157,16 +129,23 @@
                 tooltip.classList.remove('hidden');
 
                 const rect = el.getBoundingClientRect();
-
-                // Position tooltip above the button, centered
                 tooltip.style.left = `${rect.left + rect.width / 2}px`;
-                tooltip.style.top = `${rect.bottom + 8}px`; // 8px space below the trigger
-                tooltip.style.transform = 'translateX(-50%)'; // only center horizontally
+                tooltip.style.top = `${rect.bottom + 8}px`;
+                tooltip.style.transform = 'translateX(-50%)';
             });
 
             el.addEventListener('mouseleave', () => {
                 tooltip.classList.add('hidden');
             });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
         });
     </script>
 

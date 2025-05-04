@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100 shadow-sm px-10 py-5 sticky top-0 z-50">
+<div class="navbar bg-base-100  px-10 py-5 sticky top-0 z-50">
     <div class="navbar-start mx-auto">
 
         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 30" class="h-svgo-icon h-svgo-icon--logo"
@@ -41,70 +41,220 @@
 
                 </span>
             </button>
-            <div class="fixed top-24 w-[818px] left-1/2 transform -translate-x-1/2 dropdown p-8 bg-base-100 shadow-xl rounded-2xl"
+            <div class="fixed top-24 w-[1227px] left-1/2 transform -translate-x-1/2 dropdown p-8 bg-base-100 shadow-xl rounded-2xl"
                 popover id="popover-layanan" style="position-anchor:--anchor">
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="flex flex-col">
-                        <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="size-6">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="M10 21.397a1 1 0 0 1 1-1h9.25a1 1 0 0 1 0 2H11a1 1 0 0 1-1-1ZM6.614 19.174 19.766 5.88l.28-.285-.283-.28-1.272-1.26-.285-.28-.281.283-8.074 8.145-5.08 5.153-.07.072-.03.097-.722 2.486 2.494-.735.098-.03.073-.072Zm1.815-8.378-5.083 5.157c-.16.161-.238.242-.304.332a1.5 1.5 0 0 0-.15.256c-.047.1-.078.21-.142.426l-.886 3.048c-.279.96-.418 1.44-.295 1.767.107.284.332.509.617.615.328.121.808-.02 1.768-.303l3.055-.9c.22-.066.331-.098.434-.147.092-.042.179-.094.26-.155.091-.067.172-.15.334-.313L21.189 7.285c.59-.597.885-.895.995-1.238a1.498 1.498 0 0 0-.005-.926c-.113-.341-.412-.637-1.008-1.227l-1.272-1.259c-.598-.59-.896-.886-1.24-.996a1.502 1.502 0 0 0-.927.005c-.342.113-.638.41-1.229 1.007l-8.074 8.145Z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <div class="text-start">
-                                <h1 class="font-bold text-base">Blog</h1>
-                                <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
-                            </div>
-                        </a>
-                        <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="size-6">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="M19.003 4.834a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.39 1.5a4.502 4.502 0 0 1 8.89 1 4.5 4.5 0 0 1-8.89 1H1.5a1 1 0 0 1 0-2h13.114ZM5.002 14.17a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.5 2.5a4.5 4.5 0 0 1 8.889-1h13.113a1 1 0 1 1 0 2H9.39a4.502 4.502 0 0 1-8.89-1Z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <div class="text-start">
-                                <h1 class="font-bold text-base">Fitur dan tool</h1>
-                                <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
-                            </div>
-                        </a>
-                        <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="size-6">
-                                <path fill="currentColor"
-                                    d="M1.5 23.502c-.26 0-.52-.1-.71-.29a.972.972 0 0 1-.28-.84c.06-.45.64-4.46 2.5-6.02.63-.53 1.43-.8 2.26-.79.83.03 1.61.35 2.21.93 1.22 1.2 1.29 3.18.17 4.5-1.56 1.86-5.56 2.44-6.01 2.5h-.13l-.01.01Zm3.67-5.94c-.32 0-.63.11-.87.32-.69.58-1.22 2.05-1.54 3.36 1.31-.32 2.78-.85 3.36-1.54.44-.53.43-1.32-.03-1.78a1.32 1.32 0 0 0-.88-.36h-.04Zm6.56 4.32a.992.992 0 0 1-1-1v-4.97l-2.64-2.64H3.12c-.3 0-.58-.13-.77-.36-.19-.23-.27-.53-.22-.82.07-.38.72-3.72 2.58-4.96 1.63-1.08 4.26-.63 5.54-.32 1.3-1.84 3.01-3.38 4.99-4.47 2.22-1.22 4.75-1.82 7.26-1.84.55 0 .99.45.99 1 0 3.54-1.11 8.48-6.31 12.26.31 1.28.76 3.9-.32 5.52-1.24 1.86-4.58 2.51-4.96 2.58-.06.01-.12.02-.18.02h.01Zm1-5.7v3.42c.99-.31 2.07-.81 2.48-1.42.47-.7.4-2.09.18-3.28-.86.48-1.75.91-2.66 1.28Zm-3.06-4.15 2.3 2.3c1.22-.5 2.4-1.11 3.52-1.82 4.45-2.99 5.75-6.9 5.97-9.97-1.84.14-3.63.67-5.25 1.56a12.809 12.809 0 0 0-4.71 4.45c-.71 1.11-1.32 2.27-1.83 3.48Zm-5.27-.76h3.42c.38-.91.82-1.8 1.3-2.66-1.19-.22-2.6-.29-3.3.18-.62.41-1.11 1.52-1.42 2.48Z">
-                                </path>
-                            </svg>
-                            <div class="text-start">
-                                <h1 class="font-bold text-base">KIsah kami</h1>
-                                <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="group">
+                        <div class="flex flex-col">
+                            <h1 class="text-gray-700 font-bold text-sm mb-2.5">
+                                HOSTING
+                            </h1>
+
+                            <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor"
+                                        d="M1.5 23.502c-.26 0-.52-.1-.71-.29a.972.972 0 0 1-.28-.84c.06-.45.64-4.46 2.5-6.02.63-.53 1.43-.8 2.26-.79.83.03 1.61.35 2.21.93 1.22 1.2 1.29 3.18.17 4.5-1.56 1.86-5.56 2.44-6.01 2.5h-.13l-.01.01Zm3.67-5.94c-.32 0-.63.11-.87.32-.69.58-1.22 2.05-1.54 3.36 1.31-.32 2.78-.85 3.36-1.54.44-.53.43-1.32-.03-1.78a1.32 1.32 0 0 0-.88-.36h-.04Zm6.56 4.32a.992.992 0 0 1-1-1v-4.97l-2.64-2.64H3.12c-.3 0-.58-.13-.77-.36-.19-.23-.27-.53-.22-.82.07-.38.72-3.72 2.58-4.96 1.63-1.08 4.26-.63 5.54-.32 1.3-1.84 3.01-3.38 4.99-4.47 2.22-1.22 4.75-1.82 7.26-1.84.55 0 .99.45.99 1 0 3.54-1.11 8.48-6.31 12.26.31 1.28.76 3.9-.32 5.52-1.24 1.86-4.58 2.51-4.96 2.58-.06.01-.12.02-.18.02h.01Zm1-5.7v3.42c.99-.31 2.07-.81 2.48-1.42.47-.7.4-2.09.18-3.28-.86.48-1.75.91-2.66 1.28Zm-3.06-4.15 2.3 2.3c1.22-.5 2.4-1.11 3.52-1.82 4.45-2.99 5.75-6.9 5.97-9.97-1.84.14-3.63.67-5.25 1.56a12.809 12.809 0 0 0-4.71 4.45c-.71 1.11-1.32 2.27-1.83 3.48Zm-5.27-.76h3.42c.38-.91.82-1.8 1.3-2.66-1.19-.22-2.6-.29-3.3.18-.62.41-1.11 1.52-1.42 2.48Z">
+                                    </path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">KIsah kami</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M10 21.397a1 1 0 0 1 1-1h9.25a1 1 0 0 1 0 2H11a1 1 0 0 1-1-1ZM6.614 19.174 19.766 5.88l.28-.285-.283-.28-1.272-1.26-.285-.28-.281.283-8.074 8.145-5.08 5.153-.07.072-.03.097-.722 2.486 2.494-.735.098-.03.073-.072Zm1.815-8.378-5.083 5.157c-.16.161-.238.242-.304.332a1.5 1.5 0 0 0-.15.256c-.047.1-.078.21-.142.426l-.886 3.048c-.279.96-.418 1.44-.295 1.767.107.284.332.509.617.615.328.121.808-.02 1.768-.303l3.055-.9c.22-.066.331-.098.434-.147.092-.042.179-.094.26-.155.091-.067.172-.15.334-.313L21.189 7.285c.59-.597.885-.895.995-1.238a1.498 1.498 0 0 0-.005-.926c-.113-.341-.412-.637-1.008-1.227l-1.272-1.259c-.598-.59-.896-.886-1.24-.996a1.502 1.502 0 0 0-.927.005c-.342.113-.638.41-1.229 1.007l-8.074 8.145Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">Blog</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M19.003 4.834a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.39 1.5a4.502 4.502 0 0 1 8.89 1 4.5 4.5 0 0 1-8.89 1H1.5a1 1 0 0 1 0-2h13.114ZM5.002 14.17a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.5 2.5a4.5 4.5 0 0 1 8.889-1h13.113a1 1 0 1 1 0 2H9.39a4.502 4.502 0 0 1-8.89-1Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">Fitur dan tool</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor"
+                                        d="M1.5 23.502c-.26 0-.52-.1-.71-.29a.972.972 0 0 1-.28-.84c.06-.45.64-4.46 2.5-6.02.63-.53 1.43-.8 2.26-.79.83.03 1.61.35 2.21.93 1.22 1.2 1.29 3.18.17 4.5-1.56 1.86-5.56 2.44-6.01 2.5h-.13l-.01.01Zm3.67-5.94c-.32 0-.63.11-.87.32-.69.58-1.22 2.05-1.54 3.36 1.31-.32 2.78-.85 3.36-1.54.44-.53.43-1.32-.03-1.78a1.32 1.32 0 0 0-.88-.36h-.04Zm6.56 4.32a.992.992 0 0 1-1-1v-4.97l-2.64-2.64H3.12c-.3 0-.58-.13-.77-.36-.19-.23-.27-.53-.22-.82.07-.38.72-3.72 2.58-4.96 1.63-1.08 4.26-.63 5.54-.32 1.3-1.84 3.01-3.38 4.99-4.47 2.22-1.22 4.75-1.82 7.26-1.84.55 0 .99.45.99 1 0 3.54-1.11 8.48-6.31 12.26.31 1.28.76 3.9-.32 5.52-1.24 1.86-4.58 2.51-4.96 2.58-.06.01-.12.02-.18.02h.01Zm1-5.7v3.42c.99-.31 2.07-.81 2.48-1.42.47-.7.4-2.09.18-3.28-.86.48-1.75.91-2.66 1.28Zm-3.06-4.15 2.3 2.3c1.22-.5 2.4-1.11 3.52-1.82 4.45-2.99 5.75-6.9 5.97-9.97-1.84.14-3.63.67-5.25 1.56a12.809 12.809 0 0 0-4.71 4.45c-.71 1.11-1.32 2.27-1.83 3.48Zm-5.27-.76h3.42c.38-.91.82-1.8 1.3-2.66-1.19-.22-2.6-.29-3.3.18-.62.41-1.11 1.52-1.42 2.48Z">
+                                    </path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">KIsah kami</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="flex flex-col">
+                            <h1 class="text-gray-700 font-bold text-sm mb-2.5">
+                                HOSTING
+                            </h1>
+                            <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M10 21.397a1 1 0 0 1 1-1h9.25a1 1 0 0 1 0 2H11a1 1 0 0 1-1-1ZM6.614 19.174 19.766 5.88l.28-.285-.283-.28-1.272-1.26-.285-.28-.281.283-8.074 8.145-5.08 5.153-.07.072-.03.097-.722 2.486 2.494-.735.098-.03.073-.072Zm1.815-8.378-5.083 5.157c-.16.161-.238.242-.304.332a1.5 1.5 0 0 0-.15.256c-.047.1-.078.21-.142.426l-.886 3.048c-.279.96-.418 1.44-.295 1.767.107.284.332.509.617.615.328.121.808-.02 1.768-.303l3.055-.9c.22-.066.331-.098.434-.147.092-.042.179-.094.26-.155.091-.067.172-.15.334-.313L21.189 7.285c.59-.597.885-.895.995-1.238a1.498 1.498 0 0 0-.005-.926c-.113-.341-.412-.637-1.008-1.227l-1.272-1.259c-.598-.59-.896-.886-1.24-.996a1.502 1.502 0 0 0-.927.005c-.342.113-.638.41-1.229 1.007l-8.074 8.145Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">Blog</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor"
+                                        d="M1.5 23.502c-.26 0-.52-.1-.71-.29a.972.972 0 0 1-.28-.84c.06-.45.64-4.46 2.5-6.02.63-.53 1.43-.8 2.26-.79.83.03 1.61.35 2.21.93 1.22 1.2 1.29 3.18.17 4.5-1.56 1.86-5.56 2.44-6.01 2.5h-.13l-.01.01Zm3.67-5.94c-.32 0-.63.11-.87.32-.69.58-1.22 2.05-1.54 3.36 1.31-.32 2.78-.85 3.36-1.54.44-.53.43-1.32-.03-1.78a1.32 1.32 0 0 0-.88-.36h-.04Zm6.56 4.32a.992.992 0 0 1-1-1v-4.97l-2.64-2.64H3.12c-.3 0-.58-.13-.77-.36-.19-.23-.27-.53-.22-.82.07-.38.72-3.72 2.58-4.96 1.63-1.08 4.26-.63 5.54-.32 1.3-1.84 3.01-3.38 4.99-4.47 2.22-1.22 4.75-1.82 7.26-1.84.55 0 .99.45.99 1 0 3.54-1.11 8.48-6.31 12.26.31 1.28.76 3.9-.32 5.52-1.24 1.86-4.58 2.51-4.96 2.58-.06.01-.12.02-.18.02h.01Zm1-5.7v3.42c.99-.31 2.07-.81 2.48-1.42.47-.7.4-2.09.18-3.28-.86.48-1.75.91-2.66 1.28Zm-3.06-4.15 2.3 2.3c1.22-.5 2.4-1.11 3.52-1.82 4.45-2.99 5.75-6.9 5.97-9.97-1.84.14-3.63.67-5.25 1.56a12.809 12.809 0 0 0-4.71 4.45c-.71 1.11-1.32 2.27-1.83 3.48Zm-5.27-.76h3.42c.38-.91.82-1.8 1.3-2.66-1.19-.22-2.6-.29-3.3.18-.62.41-1.11 1.52-1.42 2.48Z">
+                                    </path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">KIsah kami</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-gray-700 font-bold text-sm mb-2.5">
+                                HOSTING
+                            </h1>
+                            <a href="#"
+                                class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M10 21.397a1 1 0 0 1 1-1h9.25a1 1 0 0 1 0 2H11a1 1 0 0 1-1-1ZM6.614 19.174 19.766 5.88l.28-.285-.283-.28-1.272-1.26-.285-.28-.281.283-8.074 8.145-5.08 5.153-.07.072-.03.097-.722 2.486 2.494-.735.098-.03.073-.072Zm1.815-8.378-5.083 5.157c-.16.161-.238.242-.304.332a1.5 1.5 0 0 0-.15.256c-.047.1-.078.21-.142.426l-.886 3.048c-.279.96-.418 1.44-.295 1.767.107.284.332.509.617.615.328.121.808-.02 1.768-.303l3.055-.9c.22-.066.331-.098.434-.147.092-.042.179-.094.26-.155.091-.067.172-.15.334-.313L21.189 7.285c.59-.597.885-.895.995-1.238a1.498 1.498 0 0 0-.005-.926c-.113-.341-.412-.637-1.008-1.227l-1.272-1.259c-.598-.59-.896-.886-1.24-.996a1.502 1.502 0 0 0-.927.005c-.342.113-.638.41-1.229 1.007l-8.074 8.145Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">Blog</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M19.003 4.834a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.39 1.5a4.502 4.502 0 0 1 8.89 1 4.5 4.5 0 0 1-8.89 1H1.5a1 1 0 0 1 0-2h13.114ZM5.002 14.17a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.5 2.5a4.5 4.5 0 0 1 8.889-1h13.113a1 1 0 1 1 0 2H9.39a4.502 4.502 0 0 1-8.89-1Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">Fitur dan tool</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor"
+                                        d="M1.5 23.502c-.26 0-.52-.1-.71-.29a.972.972 0 0 1-.28-.84c.06-.45.64-4.46 2.5-6.02.63-.53 1.43-.8 2.26-.79.83.03 1.61.35 2.21.93 1.22 1.2 1.29 3.18.17 4.5-1.56 1.86-5.56 2.44-6.01 2.5h-.13l-.01.01Zm3.67-5.94c-.32 0-.63.11-.87.32-.69.58-1.22 2.05-1.54 3.36 1.31-.32 2.78-.85 3.36-1.54.44-.53.43-1.32-.03-1.78a1.32 1.32 0 0 0-.88-.36h-.04Zm6.56 4.32a.992.992 0 0 1-1-1v-4.97l-2.64-2.64H3.12c-.3 0-.58-.13-.77-.36-.19-.23-.27-.53-.22-.82.07-.38.72-3.72 2.58-4.96 1.63-1.08 4.26-.63 5.54-.32 1.3-1.84 3.01-3.38 4.99-4.47 2.22-1.22 4.75-1.82 7.26-1.84.55 0 .99.45.99 1 0 3.54-1.11 8.48-6.31 12.26.31 1.28.76 3.9-.32 5.52-1.24 1.86-4.58 2.51-4.96 2.58-.06.01-.12.02-.18.02h.01Zm1-5.7v3.42c.99-.31 2.07-.81 2.48-1.42.47-.7.4-2.09.18-3.28-.86.48-1.75.91-2.66 1.28Zm-3.06-4.15 2.3 2.3c1.22-.5 2.4-1.11 3.52-1.82 4.45-2.99 5.75-6.9 5.97-9.97-1.84.14-3.63.67-5.25 1.56a12.809 12.809 0 0 0-4.71 4.45c-.71 1.11-1.32 2.27-1.83 3.48Zm-5.27-.76h3.42c.38-.91.82-1.8 1.3-2.66-1.19-.22-2.6-.29-3.3.18-.62.41-1.11 1.52-1.42 2.48Z">
+                                    </path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">KIsah kami</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="flex flex-col">
+                            <h1 class="text-gray-700 font-bold text-sm mb-2.5">
+                                HOSTING
+                            </h1>
+                            <a href="#"
+                                class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M10 21.397a1 1 0 0 1 1-1h9.25a1 1 0 0 1 0 2H11a1 1 0 0 1-1-1ZM6.614 19.174 19.766 5.88l.28-.285-.283-.28-1.272-1.26-.285-.28-.281.283-8.074 8.145-5.08 5.153-.07.072-.03.097-.722 2.486 2.494-.735.098-.03.073-.072Zm1.815-8.378-5.083 5.157c-.16.161-.238.242-.304.332a1.5 1.5 0 0 0-.15.256c-.047.1-.078.21-.142.426l-.886 3.048c-.279.96-.418 1.44-.295 1.767.107.284.332.509.617.615.328.121.808-.02 1.768-.303l3.055-.9c.22-.066.331-.098.434-.147.092-.042.179-.094.26-.155.091-.067.172-.15.334-.313L21.189 7.285c.59-.597.885-.895.995-1.238a1.498 1.498 0 0 0-.005-.926c-.113-.341-.412-.637-1.008-1.227l-1.272-1.259c-.598-.59-.896-.886-1.24-.996a1.502 1.502 0 0 0-.927.005c-.342.113-.638.41-1.229 1.007l-8.074 8.145Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">Blog</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M19.003 4.834a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.39 1.5a4.502 4.502 0 0 1 8.89 1 4.5 4.5 0 0 1-8.89 1H1.5a1 1 0 0 1 0-2h13.114ZM5.002 14.17a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.5 2.5a4.5 4.5 0 0 1 8.889-1h13.113a1 1 0 1 1 0 2H9.39a4.502 4.502 0 0 1-8.89-1Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">Fitur dan tool</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="size-6">
+                                    <path fill="currentColor"
+                                        d="M1.5 23.502c-.26 0-.52-.1-.71-.29a.972.972 0 0 1-.28-.84c.06-.45.64-4.46 2.5-6.02.63-.53 1.43-.8 2.26-.79.83.03 1.61.35 2.21.93 1.22 1.2 1.29 3.18.17 4.5-1.56 1.86-5.56 2.44-6.01 2.5h-.13l-.01.01Zm3.67-5.94c-.32 0-.63.11-.87.32-.69.58-1.22 2.05-1.54 3.36 1.31-.32 2.78-.85 3.36-1.54.44-.53.43-1.32-.03-1.78a1.32 1.32 0 0 0-.88-.36h-.04Zm6.56 4.32a.992.992 0 0 1-1-1v-4.97l-2.64-2.64H3.12c-.3 0-.58-.13-.77-.36-.19-.23-.27-.53-.22-.82.07-.38.72-3.72 2.58-4.96 1.63-1.08 4.26-.63 5.54-.32 1.3-1.84 3.01-3.38 4.99-4.47 2.22-1.22 4.75-1.82 7.26-1.84.55 0 .99.45.99 1 0 3.54-1.11 8.48-6.31 12.26.31 1.28.76 3.9-.32 5.52-1.24 1.86-4.58 2.51-4.96 2.58-.06.01-.12.02-.18.02h.01Zm1-5.7v3.42c.99-.31 2.07-.81 2.48-1.42.47-.7.4-2.09.18-3.28-.86.48-1.75.91-2.66 1.28Zm-3.06-4.15 2.3 2.3c1.22-.5 2.4-1.11 3.52-1.82 4.45-2.99 5.75-6.9 5.97-9.97-1.84.14-3.63.67-5.25 1.56a12.809 12.809 0 0 0-4.71 4.45c-.71 1.11-1.32 2.27-1.83 3.48Zm-5.27-.76h3.42c.38-.91.82-1.8 1.3-2.66-1.19-.22-2.6-.29-3.3.18-.62.41-1.11 1.52-1.42 2.48Z">
+                                    </path>
+                                </svg>
+                                <div class="text-start">
+                                    <h1 class="font-bold text-base">KIsah kami</h1>
+                                    <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                </div>
+                            </a>
+
+
+                        </div>
+                        <a href="#" class="hover:bg-base-200 rounded-xl w-[365px]">
+                            <div class="card p-0">
+                                <div class="card-body px-4 pb-5 pt-0">
+                                    <div class="">
+
+                                        <figure>
+                                            <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/8538b422-efce-4d86-ba4f-e4c9258bfb00/public"
+                                                class="w-full" />
+                                        </figure>
+                                        <div>
+                                            <div class="flex flex-row justify-between mt-3 mb-1">
+                                                <h1 class="text-lg font-bold">Testimoni pelanggan</h1>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 24 24" class="size-6">
+                                                    <path fill="currentColor"
+                                                        d="M20.125 13.5V5.625a1.75 1.75 0 0 0-1.75-1.75H10.5a1 1 0 1 0 0 2h6.21L5.294 17.293a1 1 0 1 0 1.414 1.414L18.125 7.29V13.5a1 1 0 1 0 2 0Z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p class="text-sm">Cerita sukses pelanggan kami, inspirasi kami.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
 
-                    <a href="#" class="hover:bg-base-200 rounded-xl w-[365px]">
-                        <div class="card p-0">
-                            <div class="card-body px-4 pb-5 pt-0">
-                                <div class="">
 
-                                    <figure>
-                                        <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/8538b422-efce-4d86-ba4f-e4c9258bfb00/public"
-                                            class="w-full" />
-                                    </figure>
-                                    <div>
-                                        <div class="flex flex-row justify-between mt-3 mb-1">
-                                            <h1 class="text-lg font-bold">Testimoni pelanggan</h1>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                class="size-6">
-                                                <path fill="currentColor"
-                                                    d="M20.125 13.5V5.625a1.75 1.75 0 0 0-1.75-1.75H10.5a1 1 0 1 0 0 2h6.21L5.294 17.293a1 1 0 1 0 1.414 1.414L18.125 7.29V13.5a1 1 0 1 0 2 0Z">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                        <p class="text-sm">Cerita sukses pelanggan kami, inspirasi kami.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
 
                 </div>
             </div>
@@ -229,36 +379,36 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 class="size-6">
                                 <path fill="currentColor" fill-rule="evenodd"
-                                    d="M10 21.397a1 1 0 0 1 1-1h9.25a1 1 0 0 1 0 2H11a1 1 0 0 1-1-1ZM6.614 19.174 19.766 5.88l.28-.285-.283-.28-1.272-1.26-.285-.28-.281.283-8.074 8.145-5.08 5.153-.07.072-.03.097-.722 2.486 2.494-.735.098-.03.073-.072Zm1.815-8.378-5.083 5.157c-.16.161-.238.242-.304.332a1.5 1.5 0 0 0-.15.256c-.047.1-.078.21-.142.426l-.886 3.048c-.279.96-.418 1.44-.295 1.767.107.284.332.509.617.615.328.121.808-.02 1.768-.303l3.055-.9c.22-.066.331-.098.434-.147.092-.042.179-.094.26-.155.091-.067.172-.15.334-.313L21.189 7.285c.59-.597.885-.895.995-1.238a1.498 1.498 0 0 0-.005-.926c-.113-.341-.412-.637-1.008-1.227l-1.272-1.259c-.598-.59-.896-.886-1.24-.996a1.502 1.502 0 0 0-.927.005c-.342.113-.638.41-1.229 1.007l-8.074 8.145Z"
+                                    d="m12 5.77-1.464-.902a8.691 8.691 0 0 0-6.51-1.066A3.26 3.26 0 0 0 1.5 6.977v9.527c0 1.591 1.48 2.77 3.032 2.412a7.426 7.426 0 0 1 5.562.911l1.12.69a1.5 1.5 0 0 0 1.572 0l1.12-.69a7.426 7.426 0 0 1 5.562-.911 2.476 2.476 0 0 0 3.032-2.412V6.977a3.26 3.26 0 0 0-2.526-3.175 8.692 8.692 0 0 0-6.51 1.066L12 5.77Zm-1 12.268V7.502l-1.512-.93a6.692 6.692 0 0 0-5.012-.822A1.26 1.26 0 0 0 3.5 6.977v9.527c0 .305.284.532.582.463A9.426 9.426 0 0 1 11 18.038Zm2 0a9.426 9.426 0 0 1 6.918-1.071.475.475 0 0 0 .582-.463V6.977a1.26 1.26 0 0 0-.976-1.227 6.691 6.691 0 0 0-5.012.822L13 7.502v10.536Z"
                                     clip-rule="evenodd"></path>
                             </svg>
                             <div class="text-start">
-                                <h1 class="font-bold text-base">Blog</h1>
-                                <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
-                            </div>
-                        </a>
-                        <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                class="size-6">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="M19.003 4.834a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.39 1.5a4.502 4.502 0 0 1 8.89 1 4.5 4.5 0 0 1-8.89 1H1.5a1 1 0 0 1 0-2h13.114ZM5.002 14.17a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.5 2.5a4.5 4.5 0 0 1 8.889-1h13.113a1 1 0 1 1 0 2H9.39a4.502 4.502 0 0 1-8.89-1Z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <div class="text-start">
-                                <h1 class="font-bold text-base">Fitur dan tool</h1>
-                                <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                <h1 class="font-bold text-base">Panduan pengguna</h1>
+                                <p class="text-gray-700 text-sm mt-2">Saran dan jawaban atas pertanyaan umum</p>
                             </div>
                         </a>
                         <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 class="size-6">
                                 <path fill="currentColor"
-                                    d="M1.5 23.502c-.26 0-.52-.1-.71-.29a.972.972 0 0 1-.28-.84c.06-.45.64-4.46 2.5-6.02.63-.53 1.43-.8 2.26-.79.83.03 1.61.35 2.21.93 1.22 1.2 1.29 3.18.17 4.5-1.56 1.86-5.56 2.44-6.01 2.5h-.13l-.01.01Zm3.67-5.94c-.32 0-.63.11-.87.32-.69.58-1.22 2.05-1.54 3.36 1.31-.32 2.78-.85 3.36-1.54.44-.53.43-1.32-.03-1.78a1.32 1.32 0 0 0-.88-.36h-.04Zm6.56 4.32a.992.992 0 0 1-1-1v-4.97l-2.64-2.64H3.12c-.3 0-.58-.13-.77-.36-.19-.23-.27-.53-.22-.82.07-.38.72-3.72 2.58-4.96 1.63-1.08 4.26-.63 5.54-.32 1.3-1.84 3.01-3.38 4.99-4.47 2.22-1.22 4.75-1.82 7.26-1.84.55 0 .99.45.99 1 0 3.54-1.11 8.48-6.31 12.26.31 1.28.76 3.9-.32 5.52-1.24 1.86-4.58 2.51-4.96 2.58-.06.01-.12.02-.18.02h.01Zm1-5.7v3.42c.99-.31 2.07-.81 2.48-1.42.47-.7.4-2.09.18-3.28-.86.48-1.75.91-2.66 1.28Zm-3.06-4.15 2.3 2.3c1.22-.5 2.4-1.11 3.52-1.82 4.45-2.99 5.75-6.9 5.97-9.97-1.84.14-3.63.67-5.25 1.56a12.809 12.809 0 0 0-4.71 4.45c-.71 1.11-1.32 2.27-1.83 3.48Zm-5.27-.76h3.42c.38-.91.82-1.8 1.3-2.66-1.19-.22-2.6-.29-3.3.18-.62.41-1.11 1.52-1.42 2.48Z">
+                                    d="M5.705 20.352a5.19 5.19 0 0 1-3.68-1.52 5.145 5.145 0 0 1-1.52-3.66v-.03c0-.33.03-.66.09-.98l.65-6.47c.03-.32.05-.48.07-.62a4.175 4.175 0 0 1 3.77-3.41c.14-.01.3-.01.62-.01.55 0 1 .45 1 1s-.45 1-1 1h-.47c-.98.08-1.78.8-1.95 1.77-.02.1-.03.22-.05.46l-.29 2.86c2.01-1.25 4.69-1.01 6.43.73.53.53.93 1.15 1.19 1.83.94-.27 1.94-.27 2.87 0 .26-.68.66-1.3 1.19-1.83a5.202 5.202 0 0 1 6.43-.73l-.29-2.86c-.03-.25-.04-.36-.05-.46-.17-.96-.97-1.69-1.95-1.77h-.46c-.55 0-1-.45-1-1s.45-1 1-1c.32 0 .48 0 .62.01 1.88.15 3.43 1.55 3.77 3.41.02.13.04.28.07.57l.65 6.51c.06.32.09.65.09.98v.03c0 1.38-.54 2.68-1.52 3.66-2.03 2.03-5.33 2.03-7.35 0-.95-.95-1.49-2.2-1.52-3.53a3.2 3.2 0 0 0-2.2 0 5.178 5.178 0 0 1-1.52 3.53c-.98.98-2.29 1.52-3.68 1.52l-.01.01Zm-3.2-5.15c.01.84.34 1.62.94 2.22 1.21 1.21 3.32 1.21 4.53 0 .6-.6.94-1.41.94-2.26 0-.85-.33-1.66-.94-2.26a3.205 3.205 0 0 0-4.53 0c-.44.44-.73.98-.86 1.57l-.07.74-.01-.01Zm15.8-3.25c-.82 0-1.64.31-2.26.94-.6.6-.94 1.41-.94 2.26 0 .85.33 1.66.94 2.26a3.205 3.205 0 0 0 5.47-2.22l-.07-.74c-.13-.59-.42-1.14-.86-1.57-.62-.62-1.44-.94-2.26-.94l-.02.01Z">
                                 </path>
                             </svg>
                             <div class="text-start">
-                                <h1 class="font-bold text-base">KIsah kami</h1>
-                                <p class="text-gray-700 text-sm mt-2">Berita dan informasi terbaru</p>
+                                <h1 class="font-bold text-base">Tutorial</h1>
+                                <p class="text-gray-700 text-sm mt-2">VIdeo dan artikel untuk sukses bisnis online</p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex flex-row gap-6 py-3 px-4 rounded-xl hover:bg-base-200 w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="size-6">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M3.5 9a8.5 8.5 0 0 1 17 0c0 .057-.005.112-.014.166A3.001 3.001 0 0 1 22.5 12v3a3.001 3.001 0 0 1-2 2.83v.42a4.5 4.5 0 0 1-4.5 4.5h-1.75a1 1 0 1 1 0-2H16a2.5 2.5 0 0 0 2.5-2.5v-.42a3.001 3.001 0 0 1-2-2.83v-3c0-1.311.841-2.426 2.014-2.834A1.008 1.008 0 0 1 18.5 9a6.5 6.5 0 1 0-13 0v.17c1.165.413 2 1.524 2 2.83v3a3 3 0 1 1-6 0v-3c0-1.306.835-2.417 2-2.83V9Zm2 6v-3a1 1 0 1 0-2 0v3a1 1 0 1 0 2 0Zm15-3v3a1 1 0 1 1-2 0v-3a1 1 0 1 1 2 0Z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <div class="text-start">
+                                <h1 class="font-bold text-base">Kontak</h1>
+                                <p class="text-gray-700 text-sm mt-2">Cara menghubungi kami.</p>
                             </div>
                         </a>
                     </div>
@@ -269,12 +419,12 @@
                                 <div class="">
 
                                     <figure>
-                                        <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/8538b422-efce-4d86-ba4f-e4c9258bfb00/public"
+                                        <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/1fe54d13-2cb9-46c3-31c4-d5c4a82d5500/public"
                                             class="w-full" />
                                     </figure>
                                     <div>
                                         <div class="flex flex-row justify-between mt-3 mb-1">
-                                            <h1 class="text-lg font-bold">Testimoni pelanggan</h1>
+                                            <h1 class="text-lg font-bold">Cara buat website</h1>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                                 viewBox="0 0 24 24" class="size-6">
                                                 <path fill="currentColor"
@@ -282,7 +432,7 @@
                                                 </path>
                                             </svg>
                                         </div>
-                                        <p class="text-sm">Cerita sukses pelanggan kami, inspirasi kami.</p>
+                                        <p class="text-sm">Panduan lengkap membuat dan mengonlinekan website.</p>
                                     </div>
                                 </div>
                             </div>
