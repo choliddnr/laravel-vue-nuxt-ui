@@ -51,7 +51,6 @@
             const id = e.target.getAttribute('id');
             const selector = 'button[popovertarget=' + id + ']';
             const btn = document.querySelector(selector);
-            console.log('e', btn);
 
 
             if (e.newState === "open") {
@@ -72,7 +71,6 @@
 
 
         const tooltipcontents = document.getElementsByClassName('herosection');
-        console.log(tooltipcontents);
 
         [...tooltipcontents].forEach((tooltipcontent) => {
             const style = window.getComputedStyle(tooltipcontent);
