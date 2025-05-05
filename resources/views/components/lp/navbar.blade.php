@@ -13,7 +13,7 @@
                     </path>
                 </g>
             </svg></a>
-        <div class="mx-5 flex flex-row gap-4 justify-start">
+        <div class="mx-5 flex flex-row gap-4 justify-start invisible lg:visible">
 
             <a class=" text-lg font-light hover:text-gray-600 hover:bg-transparent hover:border-0 hover:shadow-none"
                 href="#">
@@ -451,7 +451,8 @@
         </div>
     </div>
     <div class="navbar-end">
-        <a class="btn btn-outline btn-secondary hover:bg-base-200 hover:text-base-content">Login</a>
+        <a
+            class="btn btn-outline btn-secondary hover:bg-base-200 hover:text-base-content invisible md:visible">Login</a>
     </div>
 </div>
 
