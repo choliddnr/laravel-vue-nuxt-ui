@@ -3,7 +3,7 @@ name: Deploy Laravel App to Shared Hosting
 on:
   push:
     branches:
-      - main  # or your deployment branch
+      - main # or your deployment branch
 
 jobs:
   deploy:
@@ -30,10 +30,10 @@ jobs:
           rm -rf node_modules tests .git .github
 
       - name: Deploy to Shared Hosting via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./  # base folder
+          local-dir: ./ # base folder
           server-dir: ${{ secrets.FTP_REMOTE_PATH }}
