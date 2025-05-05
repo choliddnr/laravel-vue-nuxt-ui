@@ -5,8 +5,9 @@
         </div>
         <div class="hero-content text-neutral-content text-center">
             <div class="">
-                <h1 class="mb-5 text-5xl font-bold">Hi, I'm <span class="text-accent underline">Cholid</span><span
-                        class="italic">(kholid)</span>
+                <h1 class="mb-5 text-5xl font-bold">Hi, I'm <span class="text-accent underline">Cholid</span>
+                    {{-- <span
+                    class="italic">(kholid)</span> --}}
                 </h1>
                 <h4 class="mb-5 text-2xl font-semibold">I craft modern, powerfull, and scalable web app</h4>
                 <p class="mb-5">
