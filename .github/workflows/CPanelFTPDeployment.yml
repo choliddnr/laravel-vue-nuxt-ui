@@ -1,0 +1,39 @@
+name: Deploy Laravel App to Shared Hosting
+
+on:
+  push:
+    branches:
+      - main  # or your deployment branch
+
+jobs:
+  deploy:
+    name: Deploy via FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+
+      - name: Install Composer Dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Prepare for Deployment
+        run: |
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+          rm -rf node_modules tests .git .github
+
+      - name: Deploy to Shared Hosting via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # base folder
+          server-dir: ${{ secrets.FTP_REMOTE_PATH }}
